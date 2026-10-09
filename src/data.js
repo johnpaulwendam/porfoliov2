@@ -59,3 +59,4 @@ export const ANSWERS = [
   [/contact|email|reach/, "Use the Email Me button at the top or the Get In Touch section."],
   [/educ|school|study|degree/, "I study BS Information Technology. See the education timeline."],
 ];
+
