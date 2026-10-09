@@ -92,7 +92,7 @@ const Projects = ({ items }) => (
   </section>
 );
 function Heatmap() {
-  // Sample data. Swap for real data from the GitHub GraphQL API via a Supabase Edge Function.
+  
   const { cells, total } = useMemo(() => {
     let s = 7, t = 0;
     const c = [];

@@ -1,4 +1,8 @@
-// Edit this file with your real details. Used as fallback when Supabase is not set up.
+import menteelog from "./Menteelog.png";
+import kumon from "./kumon.png";
+import product from "./product.png";
+import portfolio from "./porfolio.png";
+
 export const PROFILE = {
   name: "John Paul Wendam",
   role: "FRONT END DEVELOPER",
@@ -19,30 +23,30 @@ export const PROJECTS = [
   {
     id: 1, title: "MeenteLog", description: "A website for the students.",
     tags: ["React", "JavaScript", "Supabase"], color: "#e8742a",
-    image: "/projects/meentelog.png",
+    image: menteelog,
     live_url: "https://your-meentelog-link.vercel.app",
-   live_label: "View Design",
+    live_label: "View Project",
   },
   {
     id: 2, title: "KOMUN", description: "A website for appointing on barangays.",
     tags: ["Figma"], color: "#3b82f6",
-    image: "src/kumon.png",
-    live_url: "https://www.figma.com/proto/072lBfrmS3zuCY87Lv116u/Wireframing-Prototyping?node-id=305-359&starting-point-node-id=305%3A338",
+    image: kumon,
+    live_url: "https://www.figma.com/proto/0721BfrmS3zuCY87Lv116u/Wireframing-Prototyping?node-id=305-359&starting-point-node-id=305%3A338",
     live_label: "View Design",
   },
   {
     id: 3, title: "Product", description: "An advertisement product.",
     tags: ["Figma"], color: "#8b5cf6",
-    image: "src/product.png",
+    image: product,
     live_url: "https://www.figma.com/design/v6sWHM7eSkbLLTkaLG6IoD/FIle-1?node-id=3-2&p=f&t=W2xWLI6ID7muOOTg-0",
     live_label: "View Design",
   },
   {
     id: 5, title: "My Portfolio", description: "My own compilation of past projects I've done.",
     tags: ["React", "JavaScript", "Supabase"], color: "#f59e0b",
-    image: "src/porfolio.png",
+    image: portfolio,
     live_url: "https://your-portfolio.vercel.app",
-    live_label: "View Design",
+    live_label: "View Project",
   },
 ];
 
@@ -59,4 +63,3 @@ export const ANSWERS = [
   [/contact|email|reach/, "Use the Email Me button at the top or the Get In Touch section."],
   [/educ|school|study|degree/, "I study BS Information Technology. See the education timeline."],
 ];
-
