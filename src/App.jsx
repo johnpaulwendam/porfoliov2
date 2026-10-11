@@ -91,28 +91,6 @@ const Projects = ({ items }) => (
     ))}
   </section>
 );
-function Heatmap() {
-  
-  const { cells, total } = useMemo(() => {
-    let s = 7, t = 0;
-    const c = [];
-    for (let i = 0; i < 371; i++) {
-      s = (s * 16807) % 2147483647;
-      const r = s / 2147483647, n = r < 0.45 ? 0 : Math.floor(r * r * 14);
-      t += n;
-      c.push({ n, l: n === 0 ? 0 : n < 3 ? 1 : n < 6 ? 2 : n < 10 ? 3 : 4 });
-    }
-    return { cells: c, total: t };
-  }, []);
-  return (
-    <section className="panel">
-      <div className="heat" role="img" aria-label="Contribution heatmap for the past year, sample data">
-        {cells.map((c, i) => <div key={i} className={c.l ? "l" + c.l : ""} title={`${c.n} contributions`} />)}
-      </div>
-      <div className="legend">{total} contributions in the last year (sample data)</div>
-    </section>
-  );
-}
 
 const Certs = ({ items }) => (
   <section>
@@ -184,7 +162,6 @@ export default function App() {
       <Hero light={light} setLight={setLight} />
       <Rule>SCROLLING THROUGH CODE</Rule><About />
       <Rule>FEATURED PROJECTS</Rule><Projects items={projects} />
-      <Rule>GITHUB ACTIVITY</Rule><Heatmap />
       <Rule>RECOGNITION &amp; CERTIFICATIONS</Rule><Certs items={certs} />
       <Rule>GET IN TOUCH</Rule>
       <section className="contact panel">
